@@ -1,4 +1,4 @@
- /* ------Strukturen ----- */
+/* ------Strukturen ----- */
 /* Kommentar 1 */ 
 # Kommentar 2 
 -- Kommentar 3 
@@ -17,9 +17,13 @@ SHOW DATABASES;
 /* DB auswählen */
 USE boo;
 
-CREATE TABLE test
+DROP TABLE IF EXISTS test;
+
+CREATE TABLE IF NOT EXISTS
+test
 (
     name VARCHAR(20),
+    fur_color VARCHAR(20),
     age INT
 );
 
@@ -30,8 +34,8 @@ SHOW TABLES;
 DESCRIBE test;
 
 /* ---- Daten ----- */
-INSERT INTO test(name,age) VALUES ("Grizzabella", 29);
-INSERT INTO test(age,name) VALUES (35, "Alonzo");
+INSERT INTO test(name,age,fur_color) VALUES ("Grizzabella", 29,"Rot");
+INSERT INTO test(age,name,fur_color) VALUES (35, "Alonzo","Gelb");
 INSERT INTO test VALUES ();
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
