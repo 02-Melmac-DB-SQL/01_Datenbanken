@@ -12,4 +12,4 @@ mysql-ctl stop
 mysql-ctl cli
 
 // MySQL DB-CLI exit
-exit
+exit 
