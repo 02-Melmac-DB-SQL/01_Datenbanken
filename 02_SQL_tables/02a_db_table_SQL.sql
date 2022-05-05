@@ -18,9 +18,10 @@ SHOW DATABASES;
 USE boo;
 
 CREATE TABLE test
-(
-    name VARCHAR(20),
-    age INT
+(   
+    id INT NOT NULL,PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(20),NOT NULL DEFAULT "TBA",
+    age INT NOT NULL DEFAULT 0
 );
 
 /* Alle Tabellen in der DB anzeigen */
